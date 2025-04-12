@@ -1,0 +1,1577 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  
+  /* Hide Blogger default elements */
+  #PopularPosts1,
+  #footer, 
+  .page header,
+  #comments,
+  .post-share-buttons,
+  h3.post-title, 
+  .bg-photo-container,
+  .bg-photo-overlay,
+  .centered-top-container,
+  .dim-overlay,
+  .svg-icon-24,
+  .touch-icon,
+  .search-icon,
+  .collapsed-header .centered-top-placeholder {
+    display: none;
+  }
+  
+  
+  #pricing {
+  padding: 80px 0;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.promo-banner {
+  margin-bottom: 40px;
+}
+
+.promo-banner img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.promo-banner img:hover {
+  transform: scale(1.02);
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.strategy-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.strategy-card:hover {
+  transform: translateY(-5px);
+}
+
+.strategy-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.strategy-card h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.strategy-card p {
+  font-size: 15px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.strategy-card .learn-more {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.strategy-card .learn-more:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  .post-body {
+    color: #000;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .post-body img { height: unset; }
+  .post-body h3 { color: #000; }
+  footer h3 { color: #fff; }
+  
+  .Blog .blog-posts .post-outer-container .post-outer {
+    padding-bottom: 0; 
+  }
+  
+  .Blog .blog-posts .post-outer-container,
+  .centered-bottom { 
+    padding: 0;
+  }
+  
+  .page_body .widget {
+    margin-bottom: 0;
+  }
+  
+  .page_body .centered {
+    padding: 0;
+    max-width: unset;
+  }
+  
+  @media screen and (max-width: 800px) {
+    div.widget.Blog .blog-posts .post-outer-container {
+      padding: 0;
+    }
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  a:visited {
+    color: #000;
+  }
+  
+  .buttons a:visited,
+  footer a:visited {
+    color: #fff;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Base styles for nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-icon {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 100%;
+}
+
+/* Mobile menu (initially hidden) */
+.mobile-nav-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  z-index: 999;
+}
+
+.mobile-nav-menu.open {
+  display: flex;
+}
+
+.mobile-nav-menu a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .post-body footer h3 {color: #fff;}
+  
+  /* Custom Styles */
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  p {
+    line-height: 180%;
+    font-size: 16px;
+    color: #555;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 30px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 254, 254, 0.9) 100%
+    );
+    backdrop-filter: blur(10px);
+    width: 900px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 50px -8px rgba(0, 0, 0, 0.15);
+    z-index: 300;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  nav .logo {
+    font-weight: 800;
+    font-size: 22px;
+    color: #0066cc;
+    letter-spacing: -0.5px;
+  }
+
+  nav .nav-items {
+    display: flex;
+    gap: 40px;
+  }
+
+  nav .nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+  }
+
+  nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+  }
+
+  nav .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .custom-container {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  /* Header */
+  header.custom-header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    background: linear-gradient(135deg, #e0f0ff 0%, #c2e0ff 100%);
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header.custom-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    z-index: 1;
+  }
+
+  header.custom-header .custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  header.custom-header .left {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 130%;
+    margin: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #003366 0%, #0066cc 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  header.custom-header .left p {
+    background: linear-gradient(90deg, #001a33 0%, #0066cc 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 200%;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 24px;
+  }
+
+  .download-btn {
+    background: #0066cc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    width: 210px;
+    transition: all 0.3s ease;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+    background: #0052a3;
+  }
+
+  .download-btn .btn-icon img {
+    height: 36px;
+    display: flex;
+  }
+
+  .download-btn .btn-text div:first-child {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  .download-btn .btn-text div:last-child {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  header.custom-header .right img {
+    height: 460px;
+    display: flex;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Featured Section */
+  section {
+    padding: 80px 32px;
+  }
+
+  section h2 {
+    color: #0066cc;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #e0f0ff 0%, #c2e0ff 100%);
+    border-radius: 2px;
+  }
+
+  #featured {
+    background: #fff;
+    box-shadow: 0 5px 55px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin-top: -90px;
+    position: relative;
+    z-index: 10;
+  }
+
+  #featured .logos {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #featured .logos img {
+    height: 30px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  #featured .logos img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* Features */
+  #features {
+    padding-bottom: 60px;
+  }
+
+  #features .feature-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e6f3ff 100%);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  #features .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
+  }
+
+  #features h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 15px;
+  }
+
+  #features .icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #d9ecff 0%, #cce5ff 100%);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  }
+
+  #features .icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  #features .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  /* Testimonials Section */
+  #testimonials {
+    padding: 100px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #testimonials .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  #testimonials .left {
+    width: 360px;
+  }
+
+  #testimonials .right {
+    flex: 1;
+    position: relative;
+  }
+
+  #testimonials .left h2 {
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  #testimonials .left p {
+    color: #666;
+    font-size: 16px;
+  }
+
+  #testimonials .quote-icon {
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    opacity: 0.3;
+  }
+
+  #testimonials .quote-icon img {
+    height: 60px;
+  }
+
+  #testimonials .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  #testimonials .reviewer-info img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  }
+
+  #testimonials .reviewer-info .name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  #testimonials .reviewer-info .designation {
+    font-size: 14px;
+    color: #666;
+  }
+
+  #testimonials .review {
+    font-size: 18px;
+    line-height: 180%;
+    color: #444;
+    font-style: italic;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  #testimonials .review::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 60px;
+    color: #0066cc;
+    opacity: 0.2;
+    font-family: serif;
+    line-height: 0;
+  }
+
+  .bg-element {
+    position: absolute;
+    height: 760px;
+    left: -50px;
+    right: -50px;
+    bottom: 0;
+    background: linear-gradient(135deg, #e6f2ff 0%, #d9ecff 100%);
+    z-index: -1;
+    border-radius: 40px;
+    transform: rotate(-3deg);
+  }
+
+  #testimonials .navigation-btns {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    display: flex;
+    gap: 2px;
+  }
+
+  #testimonials .navigation-btns img {
+    height: 26px;
+  }
+
+  #testimonials .prev-btn,
+  #testimonials .next-btn {
+    background: #fff;
+    display: flex;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  #testimonials .prev-btn:hover,
+  #testimonials .next-btn:hover {
+    opacity: 1;
+    background: #0066cc;
+  }
+
+  #testimonials .testimonial-card {
+    opacity: 0;
+    transition: all 300ms ease;
+    position: absolute;
+    width: 100%;
+  }
+
+  #testimonials .testimonial-card.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  /* Pricing Section */
+  #pricing {
+    background: #f9f9f9;
+    border-radius: 20px;
+    margin: 40px 0;
+  }
+
+  #pricing .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  #pricing .plan {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 30px -10px rgba(0,0,0,0.05);
+  }
+
+  #pricing .plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.1);
+  }
+
+  #pricing .plan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #e0f0ff 0%, #c2e0ff 100%);
+  }
+
+  #pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+  }
+
+  #pricing ul li {
+    margin: 16px 0;
+    line-height: 1.8;
+    display: flex;
+    align-items: flex-start;
+    color: #555;
+  }
+
+  #pricing .plan-name {
+    font-size: 28px;
+    margin: 0;
+    color: #000;
+    font-weight: 700;
+  }
+
+  #pricing .plan-price {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 10px 0 20px;
+    color: #0066cc;
+  }
+
+  #pricing .btn {
+    background: #0066cc;
+    color: #fff;
+    padding: 14px 32px;
+    width: 100%;
+    margin-top: 24px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 200ms ease;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  #pricing .btn:hover {
+    transform: scale(1.03);
+    background: #0052a3;
+  }
+
+  #pricing ul li .icon {
+    margin-right: 12px;
+    color: #0066cc;
+  }
+
+  /* CTA */
+  #cta {
+    text-align: center;
+    padding: 80px 32px;
+  }
+
+  #cta .content {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 32px;
+  }
+
+  #cta .content p {
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+
+  /* Blog Section */
+  #blog {
+    padding: 80px 0;
+  }
+
+  #blog .latest-posts-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 900px) {
+    #blog .latest-posts-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  #blog .post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.5s ease;
+  }
+
+  #blog .post {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px -10px rgba(0,0,0,0.1);
+    line-height: 200%;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease;
+  }
+
+  #blog .post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.15);
+  }
+
+  #blog .post:hover img {
+    transform: scale(1.05);
+  }
+
+  #blog .thumbnail {
+    overflow: hidden;
+  }
+
+  #blog .post-content {
+    padding: 25px;
+  }
+
+  #blog .post .title {
+    font-size: 20px;
+    line-height: 150%;
+    margin: 8px 0 15px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  #blog .post .summary {
+    max-height: 95px;
+    overflow: hidden;
+    position: relative;
+    color: #555;
+    font-size: 15px;
+    line-height: 170%;
+    margin-bottom: 20px;
+  }
+
+  #blog .post .summary::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(transparent 0%, #fff 85%);
+  }
+
+  #blog .post .read-more-btn {
+    font-weight: 600;
+    color: #0066cc;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #blog .post .read-more-btn::after {
+    content: '→';
+    transition: transform 0.3s ease;
+  }
+
+  #blog .post:hover .read-more-btn::after {
+    transform: translateX(3px);
+  }
+
+  #blog .post .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  #blog .post .post-meta .category {
+    background: #e6f2ff;
+    color: #0066cc;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+    color: #fff;
+    padding-top: 80px;
+  }
+
+  footer a {
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  footer .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  footer .left p {
+    margin-top: 0;
+    opacity: 0.7;
+    max-width: 300px;
+    line-height: 170%;
+  }
+
+  footer .right {
+    display: flex;
+    gap: 80px;
+  }
+
+  footer h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  footer ul li {
+    margin: 12px 0;
+  }
+
+  footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  footer .socials {
+    display: flex;
+    gap: 25px;
+  }
+
+  footer .socials a {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    display: inline-flex;
+  }
+
+  footer .socials a:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+
+  footer .socials img {
+    height: 24px;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 1000px) {
+    nav {
+      width: calc(100% - 60px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 60px 32px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    header.custom-header .right img {
+      height: 350px;
+    }
+
+    #features .content,
+    #pricing .content {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #testimonials .content {
+      flex-direction: column;
+    }
+
+    #testimonials .left {
+      width: 100%;
+    }
+
+    footer .right {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    section {
+      padding: 60px 20px;
+    }
+
+    nav {
+      width: calc(100% - 40px);
+      top: 20px;
+      padding: 10px 20px;
+    }
+
+    nav .logo {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    header.custom-header .left p {
+      font-size: 16px;
+    }
+
+    header.custom-header {
+      min-height: unset;
+      height: auto;
+      padding: 120px 0 60px;
+    }
+
+    header.custom-header .custom-container {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+
+    header.custom-header .right img {
+      height: 280px;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+
+    .download-btn {
+      width: 100%;
+    }
+
+    #featured {
+      margin-top: 40px;
+      padding: 40px 20px;
+    }
+
+    #featured .logos {
+      gap: 30px;
+    }
+
+    #featured .logos img {
+      height: 20px;
+    }
+
+    #features .content,
+    #pricing .content,
+    #blog .latest-posts-list {
+      grid-template-columns: 1fr;
+    }
+
+    #testimonials .left h2 {
+      font-size: 28px;
+    }
+
+    footer .content {
+      flex-direction: column;
+    }
+
+    footer .right {
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    footer .copyright {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+
+  /* Hidden Items */
+  nav .menu-icon,
+  .mobile-nav-menu {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    nav .nav-items {
+      display: none;
+    }
+
+    nav .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    nav .menu-icon img {
+      height: 24px;
+      display: flex;
+    }
+
+    /* Mobile nav menu */
+    .mobile-nav-menu {
+      position: fixed;
+      right: 32px;
+      top: 90px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      font-size: 16px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      z-index: 600;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: all 300ms ease;
+      min-width: 200px;
+    }
+
+    .mobile-nav-menu a {
+      color: #333;
+      padding: 5px 0;
+    }
+
+    .mobile-nav-menu.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<nav>
+  <a class="logo" href="/">CPSTEST PRO</a>
+  <div class="nav-items">
+    <a class="nav-link" href="#features">Features</a>
+    <a class="nav-link" href="#pricing">Strategies</a>
+    <a class="nav-link" href="#blog">Blog</a>
+    <a class="nav-link" href="https://u3.shortink.io/cabinet/demo-quick-high-low?utm_campaign=817693&amp;utm_source=affiliate&amp;utm_medium=sr&amp;a=EgBRJGcvBWBmOC&amp;ac=smart-link&amp;code=50START" target="_blank">Trade Now</a>
+    <a href="#cta">Subscribe</a>
+  </div>
+
+  <div class="menu-icon">
+    <img alt="Menu" src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" />
+  </div>
+</nav>
+
+<div class="mobile-nav-menu">
+  <a class="nav-link" href="#features">Features</a>
+  <a class="nav-link" href="#pricing">Strategies</a>
+  <a class="nav-link" href="#blog">Blog</a>
+  <a class="nav-link" href="https://pocketoption.com" target="_blank">Trade Now</a>
+  <a href="#cta">Subscribe</a>
+</div>
+
+<header class="custom-header">
+  <div class="custom-container">
+    <div class="left">
+      <h1>Master Test Click Trading with Pocket Option</h1>
+      <p>
+        Discover expert strategies, market analysis, and trading insights to maximize your profits
+        with binary options trading on Pocket Option platform.
+      </p>
+
+      <div class="buttons">
+        <a class="download-btn" href="#cta">
+          <div class="btn-icon">
+            <img alt="Subscribe" src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" />
+          </div>
+          <div class="btn-text">
+            <div>Subscribe To</div>
+            <div>Our Newsletter</div>
+          </div>
+        </a>
+
+        <a class="download-btn" href="https://u3.shortink.io/cabinet/demo-quick-high-low?utm_campaign=817693&amp;utm_source=affiliate&amp;utm_medium=sr&amp;a=EgBRJGcvBWBmOC&amp;ac=smart-link&amp;code=50START" target="_blank">
+          <div class="btn-icon">
+            <img alt="Trade" src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" />
+          </div>
+          <div class="btn-text">
+            <div>Start Trading</div>
+            <div>On PocketOption</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="right">
+      <img alt="Trading Illustration" src="https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg" />
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<section id="pricing">
+  <h2>Top Pocket Option Strategies</h2>
+  <p class="section-subtitle">
+    Unlock success with copy trading on Pocket Option! Even if you're new to trading, you can still profit by automatically copying the top-performing traders each month. No experience? No problem. Just pick a pro and let their expertise work for you.
+  </p>
+
+  <!--Promo Banner-->
+  <div class="promo-banner">
+    <a href="https://u3.shortink.io/cabinet/demo-quick-high-low?utm_source=affiliate&amp;a=EgBRJGcvBWBmOC&amp;ac=smart-link&amp;code=50START" target="_blank">
+      <img alt="Promo Strategy" src="https://affiliate.pocketoption.com/uploads/banners/032-QT-EN-600x800-03.jpg" />
+    </a>
+  </div>
+
+  <!--Strategy Cards-->
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <img alt="Copy Trading" src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+      <h3>How Copy Trading Works</h3>
+      <p>Browse a leaderboard of successful traders and choose who to follow. Every time they trade, your account automatically mirrors their moves—win when they win.</p>
+    </div>
+
+    <div class="strategy-card">
+      <img alt="Top Traders" src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
+      <h3>Monthly Top Traders</h3>
+      <p>Pocket Option highlights the best traders each month. You can copy their trades instantly and benefit from their winning strategies with just one click.</p>
+    </div>
+
+    <div class="strategy-card">
+      <img alt="No Experience Needed" src="https://cdn-icons-png.flaticon.com/512/3107/3107343.png" />
+      <h3>Beginner-Friendly</h3>
+      <p>Even if you've never traded before, copy trading lets you earn passively by following pros. It's automated, easy, and built for new traders.</p>
+    </div>
+
+    <div class="strategy-card">
+      <img alt="Smart Investing" src="https://cdn-icons-png.flaticon.com/512/1055/1055656.png" />
+      <h3>Risk Management Built In</h3>
+      <p>Set limits and control how much you invest per trade or per trader. You stay in control while the experts do the hard work.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<div class="promo-banner">
+   <a href="https://u3.shortink.io/cabinet/demo-quick-high-low?utm_source=affiliate&amp;a=EgBRJGcvBWBmOC&amp;ac=smart-link&amp;code=50START"><img src="https://affiliate.pocketoption.com/uploads/banners/015-QT-EN-1080x1080-03.jpg" /></a>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+  <section id="features">
+    <h2>Why Choose Our Trading Insights</h2>
+    <div class="content">
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Expert Analysis" src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" />
+        </div>
+        <h3>Proven Strategies</h3>
+        <p>
+          Our team of trading experts provides battle-tested strategies that work in various market conditions.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Timely Updates" src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" />
+        </div>
+        <h3>Real-time Signals</h3>
+        <p>
+          Get timely trading signals and market analysis to help you make informed decisions.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Practical Guides" src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" />
+        </div>
+        <h3>Risk Management</h3>
+        <p>
+          Learn proper money management techniques to protect your capital and maximize gains.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Product Reviews" src="https://cdn-icons-png.flaticon.com/512/2936/2936777.png" />
+        </div>
+        <h3>Platform Guides</h3>
+        <p>
+          Master the Pocket Option platform with our comprehensive tutorials and tips.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Industry Trends" src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" />
+        </div>
+        <h3>Market Analysis</h3>
+        <p>
+          Daily analysis of currency pairs, commodities, and indices for better trading decisions.
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="icon">
+          <img alt="Community" src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" />
+        </div>
+        <h3>Trading Community</h3>
+        <p>
+          Join our community of like-minded traders to share ideas and strategies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="content">
+      <div class="left">
+        <h2>What Our Members Say About Our Strategies</h2>
+        <p>Join thousands of traders who have improved their results with our guidance.</p>
+      </div>
+
+      <div class="right">
+        <div class="testimonial-card active">
+          <span class="quote-icon">
+            <img alt="Quote" src="https://cdn-icons-png.flaticon.com/512/3408/3408544.png" />
+          </span>
+
+          <p class="review">
+            The strategies I learned here helped me turn my trading around. I went from losing money to consistent profits within 3 months. The risk management techniques were game-changing.
+          </p>
+
+          <div class="reviewer-info">
+            <div class="image">
+              <img alt="John Smith" src="https://randomuser.me/api/portraits/men/32.jpg" />
+            </div>
+
+            <div class="details">
+              <div class="name">John Smith</div>
+              <div class="designation">Full-time Trader</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <span class="quote-icon">
+            <img alt="Quote" src="https://cdn-icons-png.flaticon.com/512/3408/3408544.png" />
+          </span>
+
+          <p class="review">
+            As a beginner, I was overwhelmed by all the information out there. This blog gave me clear, actionable strategies that actually work on Pocket Option. My account has grown 150% in 6 months.
+          </p>
+
+          <div class="reviewer-info">
+            <div class="image">
+              <img alt="Sarah Johnson" src="https://randomuser.me/api/portraits/women/44.jpg" />
+            </div>
+
+            <div class="details">
+              <div class="name">Sarah Johnson</div>
+              <div class="designation">Part-time Trader</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <span class="quote-icon">
+            <img alt="Quote" src="https://cdn-icons-png.flaticon.com/512/3408/3408544.png" />
+          </span>
+
+          <p class="review">
+            The market analysis is incredibly accurate. I use their signals as confirmation for my own trades and my win rate has improved dramatically. Worth every penny for the premium membership.
+          </p>
+
+          <div class="reviewer-info">
+            <div class="image">
+              <img alt="Michael Chen" src="https://randomuser.me/api/portraits/men/67.jpg" />
+            </div>
+
+            <div class="details">
+              <div class="name">Michael Chen</div>
+              <div class="designation">Forex Trader</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-btns">
+      <div class="prev-btn">
+        <img alt="Previous" src="https://cdn-icons-png.flaticon.com/512/271/271220.png" />
+      </div>
+      <div class="next-btn">
+        <img alt="Next" src="https://cdn-icons-png.flaticon.com/512/271/271228.png" />
+      </div>
+    </div>
+
+    <span class="bg-element"></span>
+  </section>
+<section id="pricing">
+  <h2>Top Pocket Option Strategies</h2>
+  <p class="section-subtitle">Explore proven strategies to boost your binary options trading success.</p>
+
+  <!--Promo Banner-->
+  <div class="promo-banner">
+    <a href="https://u3.shortink.io/cabinet/demo-quick-high-low?utm_source=affiliate&amp;a=EgBRJGcvBWBmOC&amp;ac=smart-link&amp;code=50START" target="_blank">
+      <img alt="Promo Strategy" src="https://affiliate.pocketoption.com/uploads/banners/032-QT-EN-600x800-03.jpg" />
+    </a>
+  </div>
+
+  
+  
+   <h2>OTHER POST YOU MIGHT BE INTERESTED IN</h2>
+  
+  <!--Strategy Cards-->
+  <div class="strategy-grid">
+    <!--Card 1-->
+    <div class="strategy-card">
+      <img alt="Strategy 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL_lsISBb_rFhhjTpHGTbvJbiduHXlWp2-_xvzr0FWALg8EFA4AGOIWXB9vY5M2Yrqucj7-BHi3CfTCdo2vNkKOgQW5eOyPKsiwmlgg5meH4bcjHzcIzKmuoIG3_BD9TcXVf1ABMkAVFIZT4Th_Auo9wdNu-1Im8igR-p8bjoptDZ0K4fTJ6IT2G01l-Sy/s1024/ChatGPT%20Image%20Apr%208,%202025,%2011_47_40%20AM.png" />
+      <h3>CPS Test Click Game</h3>
+      <p>
+      CPS test allows you to test your finger speed on the mouse to check how speedily you can click on the mouse button. The faster you click the faster you can break the records. The most players at the click speed test managed to click between 5-10 clicks per second. Now, it's up to you how fast you can click!
+    </p>
+      <a class="learn-more" href="https://www.cps-test.top/2025/03/cps-test-check-clicks-per-second.html">Learn More</a>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--Card 2-->
+<div class="strategy-card">
+  <img alt="Earn Money Taking Surveys" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz6Q3DNA9GB0F-2BN7Xz_mBhgtS04s1fczYANZfMbHsuSZfS056hV-WKP1uMsrrEbo7Wl53gtBgkRIneukGkCbzfO0o9LKgpOptwhSZfrP_287rLKLg85eaaU3k6JJs482S7sxLFuaWuPL1wmURk0ULCegbYtjQioJZHWEL-Aps6QG606DKBNLieqb7WBw/s1024/ChatGPT%20Image%20Apr%208,%202025,%2011_40_21%20AM.png" />
+  <h3>Earn Money Taking Surveys</h3>
+  <p>Get paid for sharing your opinion! Complete quick surveys from trusted platforms and earn real cash daily. No experience needed.</p>
+  <a class="learn-more" href="https://moneyzonac.blogspot.com/2022/05/timebuck-review-legit-or-scam.html">Learn More</a>
+</div>
+
+
+    <!--Card 3-->
+    <div class="strategy-card">
+      <img alt="Strategy 3" src="https://img.freepik.com/free-photo/financial-chart-analysis_1150-9949.jpg" />
+      <h3>RSI Divergence Strategy</h3>
+      <p>Use the Relative Strength Index to identify reversal points and entry signals.</p>
+      <a class="learn-more" href="#">Learn More</a>
+    </div>
+
+    <!--Card 4-->
+    <div class="strategy-card">
+      <img alt="Strategy 4" src="https://img.freepik.com/free-photo/marketing-strategy-planning-analysis-graph_53876-121000.jpg" />
+      <h3>News-Based Trading</h3>
+      <p>Capitalize on market volatility during economic news releases for major movements.</p>
+      <a class="learn-more" href="#">Learn More</a>
+    </div>
+
+    <!--Card 5-->
+    <div class="strategy-card">
+      <img alt="Strategy 5" src="https://img.freepik.com/free-photo/business-graph-chart-analysis_53876-120862.jpg" />
+      <h3>Martingale Strategy</h3>
+      <p>Recover losses by doubling trades after losses—risky but effective with control.</p>
+      <a class="learn-more" href="#">Learn More</a>
+    </div>
+  </div>
+</section>
+  --&gt;
+  
+  
+  <script>
+  const menuIcon = document.querySelector(".menu-icon");
+  const mobileMenu = document.querySelector(".mobile-nav-menu");
+
+  menuIcon.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
+
+  // Optional: Close menu when clicking a link
+  document.querySelectorAll(".mobile-nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  });
+</script>
+
