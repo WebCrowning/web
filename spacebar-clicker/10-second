@@ -1,0 +1,301 @@
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your clicking speed with the Kohi Click Test! Measure CPS and improve your gaming skills.">
+    <meta name="keywords" content="CPS Test, Kohi Click Test, Click Speed, Mouse Clicking Test, Gaming CPS">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kohi Click Test - Measure Your Click Speed!">
+    <meta property="og:description" content="Test your CPS (Clicks Per Second) and see how fast you can click!">
+    <meta property="og:url" content="https://yourwebsite.com/kohi-click-test">
+    <title>Kohi Click Test - Check Your CPS Speed</title>
+    
+
+
+
+
+
+
+<div class="container">
+    <h2>🖱️ Kohi Click Test</h2>
+    <p>Test your clicking speed and improve your gaming skills!</p>
+
+    <div class="dropdown-container">
+        <label for="time-selector">Test Duration: </label>
+        <select id="time-selector">
+            <option value="1">1 Second</option>
+            <option value="2">2 Seconds</option>
+            <option value="5">5 Seconds</option>
+            <option value="10" selected>10 Seconds</option>
+            <option value="15">15 Seconds</option>
+            <option value="30">30 Seconds</option>
+            <option value="60">60 Seconds</option>
+            <option value="100">100 Seconds</option>
+        </select>
+    </div>
+
+    <div class="stats">
+        <div class="timer">⏳ Time: <span id="time">10</span>s</div>
+        <div class="clicks">🖱️ Clicks: <span id="clicks">0</span></div>
+        <div class="score">⚡ CPS: <span id="cps">0</span></div>
+    </div>
+
+    <div class="click-zone waiting" id="click-zone">Click to Start Test</div>
+
+    <div class="seo-content">
+        <h3>🔥 What is a CPS Test?</h3>
+        <p>The <strong>CPS (Clicks Per Second) Test</strong> measures how fast you can click your mouse. Popular among gamers, it helps improve reaction times and clicking techniques for competitive gaming.</p>
+
+        <h3>⚡ How to Play:</h3>
+        <ol>
+            <li>Click the "Click to Start Test" button above</li>
+            <li>When the timer starts, click as fast as you can</li>
+            <li>Your CPS score will be calculated automatically</li>
+        </ol>
+
+        <h3>🏆 CPS Rankings:</h3>
+        <ul>
+            <li><strong>1-3 CPS</strong>: Beginner level</li>
+            <li><strong>4-6 CPS</strong>: Average gamer</li>
+            <li><strong>7-10 CPS</strong>: Competitive level</li>
+            <li><strong>10+ CPS</strong>: Elite click speed</li>
+        </ul>
+
+        <h3>🎮 CPS in Minecraft PvP</h3>
+        <p>In Minecraft combat, clicking speed affects your attack rate:</p>
+        <ul>
+            <li><strong>5-7 CPS</strong>: Good for consistent hits</li>
+            <li><strong>8-12 CPS</strong>: Optimal for combos</li>
+            <li><strong>13+ CPS</strong>: May provide slight reach advantage</li>
+        </ul>
+
+        <h3>💡 Pro Tips to Improve CPS:</h3>
+        <ul>
+            <li>Practice daily with our click tester</li>
+            <li>Try different clicking methods (jitter, butterfly)</li>
+            <li>Use a quality gaming mouse</li>
+            <li>Adjust mouse sensitivity settings</li>
+        </ul>
+
+        <h3>⏱️ Test Duration Options</h3>
+        <p>Choose from 1 second to 100 second tests to challenge different aspects of your clicking:</p>
+        <ul>
+            <li><strong>Short tests (1-5s)</strong>: Measure burst speed</li>
+            <li><strong>Medium tests (10-30s)</strong>: Balance of speed and endurance</li>
+            <li><strong>Long tests (60-100s)</strong>: Test clicking stamina</li>
+        </ul>
+
+        <h3>📊 How CPS is Calculated</h3>
+        <p>Your CPS score is determined by:<br>
+        <strong>Total Clicks ÷ Test Duration (in seconds)</strong></p>
+        <p>Example: 60 clicks in 10 seconds = 6.0 CPS</p>
+    </div>
+</div>
+
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  
+  /* Hide Blogger default elements */
+  #PopularPosts1,
+  #footer, 
+  .page header,
+  #comments,
+  .post-share-buttons,
+  h3.post-title, 
+  .bg-photo-container,
+  .bg-photo-overlay,
+  .centered-top-container,
+  .dim-overlay,
+  .svg-icon-24,
+  .touch-icon,
+  .search-icon,
+  .collapsed-header .centered-top-placeholder {
+    display: none;
+  }
+  
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #121212;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+  
+  
+  
+   .ripple {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: rippleAnimation 0.6s linear;
+        pointer-events: none;
+    }
+
+    @keyframes rippleAnimation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+  
+  
+  
+  
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #1e1e1e;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        color: white;
+    }
+    
+    .seo-content {
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+    
+    .seo-content h3 {
+        color: #00d9ff;
+        margin-top: 20px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+    
+    .seo-content ul, .seo-content ol {
+        padding-left: 20px;
+    }
+    
+    .seo-content li {
+        margin-bottom: 8px;
+    }
+    
+    /* Existing styles from previous code */
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .stats div {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+    .timer { background: #007bff; }
+    .clicks { background: #ff6600; }
+    .score { background: #28a745; }
+    .click-zone {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.2s;
+        color: white;
+    }
+    .click-zone.waiting {
+        background-color: #333;
+        color: #00d9ff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .dropdown-container {
+        margin: 15px 0;
+        color: white;
+    }
+    #time-selector {
+        padding: 8px 12px;
+        font-size: 16px;
+        background-color: #333;
+        color: white;
+        border: 1px solid #00d9ff;
+        border-radius: 5px;
+    }
+</style>
+<script>
+    let timeLeft = 10;
+    let clicks = 0;
+    let timer;
+    let gameActive = false;
+    let testDuration = 10;
+
+    const timeDisplay = document.getElementById("time");
+    const clicksDisplay = document.getElementById("clicks");
+    const cpsDisplay = document.getElementById("cps");
+    const clickZone = document.getElementById("click-zone");
+    const timeSelector = document.getElementById("time-selector");
+
+    timeSelector.addEventListener("change", function() {
+        testDuration = parseInt(this.value);
+        timeDisplay.innerText = testDuration;
+    });
+
+    clickZone.addEventListener("click", function (event) {
+        if (!gameActive) {
+            clicks = 0;
+            timeLeft = testDuration;
+            clicksDisplay.innerText = clicks;
+            timeDisplay.innerText = timeLeft;
+            cpsDisplay.innerText = 0;
+            gameActive = true;
+            
+            clickZone.classList.remove("waiting");
+            clickZone.classList.add("active");
+            clickZone.textContent = "Click as fast as you can!";
+            
+            timer = setInterval(function () {
+                timeLeft--;
+                timeDisplay.innerText = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    gameActive = false;
+                    let cps = (clicks / testDuration).toFixed(2);
+                    cpsDisplay.innerText = cps;
+                    
+                    clickZone.classList.remove("active");
+                    clickZone.classList.add("waiting");
+                    clickZone.textContent = "Click to Start Test";
+                    
+                    alert("Test Complete! 🎉\nTotal Clicks: " + clicks + "\nYour CPS: " + cps);
+                }
+            }, 1000);
+        } else {
+            clicks++;
+            clicksDisplay.innerText = clicks;
+
+            // Create ripple effect
+            const ripple = document.createElement("div");
+            ripple.className = "ripple";
+            
+            const rect = clickZone.getBoundingClientRect();
+            ripple.style.left = `${event.clientX - rect.left}px`;
+            ripple.style.top = `${event.clientY - rect.top}px`;
+            
+            clickZone.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+    });
+</script>
