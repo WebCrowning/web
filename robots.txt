@@ -1,10 +1,7 @@
-# Optimized robots.txt file for https://cps-test.top
+# robots.txt for https://cps-test.top
 
 User-agent: *
+Allow: /
 Disallow: /cgi-bin/
 
-# Allow all other content to be crawled
-Allow: /
-
-# Sitemap location for search engines
 Sitemap: https://cps-test.top/sitemap.xml
