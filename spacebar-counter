@@ -1,1 +1,372 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page_title">My Website</title>
+    <style>
+        /* Basic styling with language considerations */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Language switcher */
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .lang-btn {
+            padding: 8px 15px;
+            margin: 0 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 60px; /* Prevent button size changes */
+        }
+        
+        .lang-btn.active {
+            background: #0056b3;
+        }
+        
+        /* Flexible UI elements for different text lengths */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px 5px;
+            min-width: 120px; /* Fixed minimum width */
+            text-align: center;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            background: #218838;
+        }
+        
+        /* Flexible containers */
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            min-height: 150px; /* Prevent layout shifts */
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            background: #e9ecef;
+            border-radius: 3px;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+        <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="changeLanguage('pt')">PT</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" data-translate="nav_home">Home</a>
+        <a href="#" data-translate="nav_about">About Us</a>
+        <a href="#" data-translate="nav_services">Our Services</a>
+        <a href="#" data-translate="nav_contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1 data-translate="main_title">Welcome to Our Website</h1>
+        
+        <p data-translate="welcome_text">
+            We provide excellent services to customers worldwide. Our team is dedicated 
+            to delivering the best solutions for your needs.
+        </p>
+        
+        <div class="card">
+            <h2 data-translate="feature_title">Our Features</h2>
+            <p data-translate="feature_text">
+                Discover our amazing features that will help grow your business 
+                and improve your productivity.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2 data-translate="benefits_title">Benefits</h2>
+            <ul>
+                <li data-translate="benefit_1">24/7 Customer Support</li>
+                <li data-translate="benefit_2">Easy to Use Interface</li>
+                <li data-translate="benefit_3">Affordable Pricing</li>
+                <li data-translate="benefit_4">30-Day Money Back Guarantee</li>
+            </ul>
+        </div>
+        
+        <!-- Call to Action Buttons -->
+        <div style="margin: 30px 0;">
+            <button class="btn" data-translate="cta_signup">Sign Up Now</button>
+            <button class="btn" data-translate="cta_learn">Learn More</button>
+            <a href="#" class="btn" data-translate="cta_contact">Contact Us</a>
+        </div>
+        
+        <!-- Statistics -->
+        <div style="display: flex; gap: 20px; margin: 40px 0;">
+            <div style="text-align: center;">
+                <h3 data-translate="stat_clients">Happy Clients</h3>
+                <p style="font-size: 24px; font-weight: bold;">10,000+</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 data-translate="stat_countries">Countries</h3>
+                <p style="font-size: 24px; font-weight: bold;">50+</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 data-translate="stat_support">Support</h3>
+                <p style="font-size: 24px; font-weight: bold;">24/7</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p data-translate="footer_copyright">© 2024 My Website. All rights reserved.</p>
+        <p>
+            <a href="#" data-translate="footer_privacy">Privacy Policy</a> | 
+            <a href="#" data-translate="footer_terms">Terms of Service</a> | 
+            <a href="#" data-translate="footer_contact">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        // Current language (default English)
+        let currentLang = 'en';
+        
+        // Translation data (normally loaded from server)
+        const translations = {
+            en: {
+                // Page title
+                page_title: "My Website",
+                
+                // Navigation
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_services: "Our Services",
+                nav_contact: "Contact",
+                
+                // Main content
+                main_title: "Welcome to Our Website",
+                welcome_text: "We provide excellent services to customers worldwide. Our team is dedicated to delivering the best solutions for your needs.",
+                feature_title: "Our Features",
+                feature_text: "Discover our amazing features that will help grow your business and improve your productivity.",
+                benefits_title: "Benefits",
+                benefit_1: "24/7 Customer Support",
+                benefit_2: "Easy to Use Interface",
+                benefit_3: "Affordable Pricing",
+                benefit_4: "30-Day Money Back Guarantee",
+                
+                // Buttons
+                cta_signup: "Sign Up Now",
+                cta_learn: "Learn More",
+                cta_contact: "Contact Us",
+                
+                // Statistics
+                stat_clients: "Happy Clients",
+                stat_countries: "Countries",
+                stat_support: "Support",
+                
+                // Footer
+                footer_copyright: "© 2024 My Website. All rights reserved.",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service",
+                footer_contact: "Contact"
+            },
+            
+            fr: {
+                page_title: "Mon Site Web",
+                nav_home: "Accueil",
+                nav_about: "À propos",
+                nav_services: "Nos Services",
+                nav_contact: "Contact",
+                main_title: "Bienvenue sur notre site web",
+                welcome_text: "Nous proposons d'excellents services aux clients du monde entier. Notre équipe se consacre à fournir les meilleures solutions pour vos besoins.",
+                feature_title: "Nos Fonctionnalités",
+                feature_text: "Découvrez nos fonctionnalités étonnantes qui aideront à développer votre entreprise et à améliorer votre productivité.",
+                benefits_title: "Avantages",
+                benefit_1: "Support client 24h/24 et 7j/7",
+                benefit_2: "Interface facile à utiliser",
+                benefit_3: "Prix abordable",
+                benefit_4: "Garantie de remboursement de 30 jours",
+                cta_signup: "S'inscrire maintenant",
+                cta_learn: "En savoir plus",
+                cta_contact: "Nous contacter",
+                stat_clients: "Clients satisfaits",
+                stat_countries: "Pays",
+                stat_support: "Support",
+                footer_copyright: "© 2024 Mon Site Web. Tous droits réservés.",
+                footer_privacy: "Politique de confidentialité",
+                footer_terms: "Conditions d'utilisation",
+                footer_contact: "Contact"
+            },
+            
+            es: {
+                page_title: "Mi Sitio Web",
+                nav_home: "Inicio",
+                nav_about: "Sobre Nosotros",
+                nav_services: "Nuestros Servicios",
+                nav_contact: "Contacto",
+                main_title: "Bienvenido a nuestro sitio web",
+                welcome_text: "Brindamos excelentes servicios a clientes en todo el mundo. Nuestro equipo está dedicado a ofrecer las mejores soluciones para sus necesidades.",
+                feature_title: "Nuestras Características",
+                feature_text: "Descubra nuestras increíbles características que ayudarán a hacer crecer su negocio y mejorar su productividad.",
+                benefits_title: "Beneficios",
+                benefit_1: "Soporte al cliente 24/7",
+                benefit_2: "Interfaz fácil de usar",
+                benefit_3: "Precios asequibles",
+                benefit_4: "Garantía de devolución de dinero de 30 días",
+                cta_signup: "Regístrate ahora",
+                cta_learn: "Aprende más",
+                cta_contact: "Contáctanos",
+                stat_clients: "Clientes Felices",
+                stat_countries: "Países",
+                stat_support: "Soporte",
+                footer_copyright: "© 2024 Mi Sitio Web. Todos los derechos reservados.",
+                footer_privacy: "Política de Privacidad",
+                footer_terms: "Términos de Servicio",
+                footer_contact: "Contacto"
+            },
+            
+            pt: {
+                page_title: "Meu Site",
+                nav_home: "Início",
+                nav_about: "Sobre Nós",
+                nav_services: "Nossos Serviços",
+                nav_contact: "Contato",
+                main_title: "Bem-vindo ao nosso site",
+                welcome_text: "Fornecemos excelentes serviços para clientes em todo o mundo. Nossa equipe está dedicada a fornecer as melhores soluções para suas necessidades.",
+                feature_title: "Nossos Recursos",
+                feature_text: "Descubra nossos recursos incríveis que ajudarão a expandir seu negócio e melhorar sua produtividade.",
+                benefits_title: "Benefícios",
+                benefit_1: "Suporte ao cliente 24/7",
+                benefit_2: "Interface fácil de usar",
+                benefit_3: "Preços acessíveis",
+                benefit_4: "Garantia de devolução do dinheiro em 30 dias",
+                cta_signup: "Inscreva-se agora",
+                cta_learn: "Saiba mais",
+                cta_contact: "Contate-nos",
+                stat_clients: "Clientes Felizes",
+                stat_countries: "Países",
+                stat_support: "Suporte",
+                footer_copyright: "© 2024 Meu Site. Todos os direitos reservados.",
+                footer_privacy: "Política de Privacidade",
+                footer_terms: "Termos de Serviço",
+                footer_contact: "Contato"
+            }
+        };
+        
+        // Function to change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update page title
+            document.title = translations[lang].page_title;
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Save preference to localStorage
+            localStorage.setItem('preferred-language', lang);
+        }
+        
+        // On page load, check for saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang && translations[savedLang]) {
+                // Simulate click on the language button
+                const langBtn = document.querySelector(`.lang-btn[onclick*="${savedLang}"]`);
+                if (langBtn) {
+                    langBtn.click();
+                }
+            }
+        });
+        
+        // Optional: Auto-detect browser language
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language.substring(0, 2);
+            const supportedLangs = ['en', 'fr', 'es', 'pt'];
+            
+            if (supportedLangs.includes(browserLang) && !localStorage.getItem('preferred-language')) {
+                const langBtn = document.querySelector(`.lang-btn[onclick*="${browserLang}"]`);
+                if (langBtn) {
+                    setTimeout(() => langBtn.click(), 1000);
+                }
+            }
+        }
+        
+        // Uncomment to enable auto-detection
+        // detectBrowserLanguage();
+    </script>
+</body>
+</html>
